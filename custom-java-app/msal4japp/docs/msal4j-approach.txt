@@ -1,0 +1,12 @@
+1. Disabled the spring security in SecurityConfiguration class
+2. Add the AuthConfiguration class and DI the its values using application.properties
+3. Create self-signed cert to support https://localhost 
+4. Add msal4j 1.8.0 dependency to the pom.xml
+5. Add AuthFilter class to to check user is authenticated on the pages
+    - Add exclusion list
+    - If user is not authenticated, redirect to the auth server 
+    - If request contain auth code or error code, i.e. auth server did a redirect back to the app, redeem auth code for an access code 
+    - Implement silent login - grab token from cache, if invalid issue refresh
+6. Call the protected api with the custom scope.
+    - Add the api route to the controller
+    - Surface the api result on the using

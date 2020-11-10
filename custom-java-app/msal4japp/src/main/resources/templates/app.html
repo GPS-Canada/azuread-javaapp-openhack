@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Java MSAL4J Demo - Homepage</title>
+  </head>
+  <body>
+
+    <h3>Logged in Account:</h3>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Environment</th>
+            <th>Id Token</th>
+        </tr>
+        </thead>
+        <tbody>
+            <td th:text="${account.environment()}"></td>
+            <td>
+                <div th:each="entry : *{idTokenClaims}">
+                    <li th:text="${entry}"></li>
+                </div>
+            </td>
+        </tbody>
+    </table>
+    
+    <br/>
+
+    <form action="/api">
+        <input type="submit" value="Call api">
+    </form>
+
+    <span th:if="${api_call_res != null}">
+        <h3>B2C Api call result:</h3>
+        <div th:utext="${api_call_res}"> </div>
+    </span>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Msal4jappApplication<msal4japp>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.becheng.msal4japp.Msal4jappApplication",
+            "projectName": "msal4japp",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringsecurityappApplication<springsecurityapp>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.becheng.springsecurityapp.SpringsecurityappApplication",
+            "projectName": "springsecurityapp",
+            "args": ""
+        }
+    ]
+}
