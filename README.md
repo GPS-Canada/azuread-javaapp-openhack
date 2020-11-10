@@ -8,7 +8,7 @@ A Hack to develop MVPs using Java to leverage Azure AD and Azure AD B2C identiti
 ## Agenda
 | Day 1 | Day2 | Day 3 | Day 4 | Day 5 |
 | --- | --- | --- | --- | --- | 
-| **1:00pm - 1:15pm**: Kickoff and Team Intros <br> **1:15pm - 3:00pm**: [MS Identity Primer](https://github.com/becheng/ms-external-identities-primer) + AAD/B2C Demo <br> **3:15pm - 3:30pm**: Break <br> **3:15pm - 4pm**: Partner Environment Overview and Setup | **1pm - 2:30pm**: Presentation + Demo of AAD/B2C Java Webapp Sample <br> **2:30pm - 2:45pm**: Break <br> **2:45pm - 4:00pm**: Hack | **1:00pm - 2:00pm**: Hack <br> **2:00pm - 2:15pm**: Break <br> **2:15pm - 4:00pm**: Hack | **1:00pm - 2:00pm**: Hack <br> **2:00pm - 2:15pm**: Break <br> **2:15pm - 4:00pm**: Hack | **1:00pm - 2:15pm**: Hack <br> **2:15pm - 3:00pm**: Closing & Lessons Learned
+| **1:00pm - 1:15pm**: Kickoff and Team Intros <br> **1:15pm - 3:00pm**: [MS Identity Primer](https://github.com/becheng/ms-external-identities-primer) + AAD/B2C Demo <br> **3:15pm - 3:30pm**: Break <br> **3:15pm - 4pm**: Partner Environment Overview and Setup | **1pm - 2:30pm**: Team whiteboarding session + Demo of AAD/B2C Java Webapp Sample <br> **2:30pm - 2:45pm**: Break <br> **2:45pm - 4:00pm**: Hack | **1:00pm - 2:00pm**: Hack <br> **2:00pm - 2:15pm**: Break <br> **2:15pm - 4:00pm**: Hack | **1:00pm - 2:00pm**: Hack <br> **2:00pm - 2:15pm**: Break <br> **2:15pm - 4:00pm**: Hack | **1:00pm - 2:15pm**: Hack <br> **2:15pm - 3:00pm**: Closing & Lessons Learned
 
 ## MVP 1: Identity with AAD B2C
 ### Objective 1: Environment Setup
@@ -39,7 +39,16 @@ References:
 4. Validate auth request and responses, i.e 'state', 'nonce', etc. *
 
 CheckList
-- [ ] Setup local environment, i.e. self-signed cert to support https://localhost
+- [ ] Setup local environment, i.e. create a self-signed cert to support https on localhost
+  ```
+  Example:  
+  keytool -genkeypair -alias testCert -keyalg RSA -storetype PKCS12 -keystore keystore.p12 -storepass password
+
+  server.ssl.key-store-type=PKCS12  
+  server.ssl.key-store=classpath:keystore.p12  
+  server.ssl.key-store-password=password  
+  server.ssl.key-alias=testCert
+  ```
 - [ ] Configuration file + class
 - [ ] Check user is authenticated on secure pages 
 - [ ] Prompt user for sign in if not authenticated
@@ -71,7 +80,7 @@ TODO
 * = *Nice to haves*   
 -->
 
-## MVP 2: 'Rinse and Repeat' using AAD
+## MVP 2: *Rinse and Repeat* using AAD
 
 ### Objective 1: Environment Setup
 1. Provision a *separate* AAD tenant.
