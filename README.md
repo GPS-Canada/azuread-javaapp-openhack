@@ -1,16 +1,16 @@
-# Identity MVP(Java) Hack
+# Identity PoC Hack in Java
 A Hack to develop MVPs using Java to leverage Azure AD and Azure AD B2C identities. 
 
 ## Goals
-1. Develop a MVP that signs-in, signs-up, and signs-out a user with Azure AD B2C using MSAL Java.
-2. Develop a MVP that signs-in, signs-up, and signs-out a user with Azure AD using MSAL Java.
+1. Develop a PoC that signs-in, signs-up, and signs-out a user with Azure AD B2C using MSAL Java.
+2. Develop a PoC that signs-in, signs-up, and signs-out a user with Azure AD using MSAL Java.
    
 ## Agenda
 | Day 1 | Day2 | Day 3 | Day 4 | Day 5 |
 | --- | --- | --- | --- | --- | 
 | **1:00pm - 1:15pm**: Kickoff and Team Intros <br> **1:15pm - 3:00pm**: [MS Identity Primer](https://github.com/becheng/ms-external-identities-primer) + AAD/B2C Demo <br> **3:15pm - 3:30pm**: Break <br> **3:15pm - 4pm**: Partner Environment Overview and Setup | **1pm - 2:30pm**: Team whiteboarding session + Demo of AAD/B2C Java Webapp Sample <br> **2:30pm - 2:45pm**: Break <br> **2:45pm - 4:00pm**: Hack | **1:00pm - 2:00pm**: Hack <br> **2:00pm - 2:15pm**: Break <br> **2:15pm - 4:00pm**: Hack | **1:00pm - 2:00pm**: Hack <br> **2:00pm - 2:15pm**: Break <br> **2:15pm - 4:00pm**: Hack | **1:00pm - 2:15pm**: Hack <br> **2:15pm - 3:00pm**: Closing & Lessons Learned
 
-## MVP 1: Identity with AAD B2C
+## PoC 1: Identity with AAD B2C
 ### Objective 1: Environment Setup
 1. Provision an AAD B2C tenant
 2. Register an B2C app  
@@ -80,7 +80,7 @@ TODO
 * = *Nice to haves*   
 -->
 
-## MVP 2: *Rinse and Repeat* using AAD
+## PoC 2: *Rinse and Repeat* using AAD
 
 ### Objective 1: Environment Setup
 1. Provision a *separate* AAD tenant.
@@ -90,7 +90,6 @@ References:
 - [Create a new AAD tenant](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) 
 - [Register an AAD app](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
 
-
 ### Objective 2: Secure Java app with AAD
 1. Rinse and repeat steps in the B2C MVP or just clone above with some minor tweaks.
 
@@ -99,12 +98,6 @@ References:
 
 ### Objective 3: Call a downstream protected web api 
 1. Call a api protected by same auth server with a scope
-
-
-   
-
-   
-
 
 ## Resources
 - MSAL Java Library: https://github.com/AzureAD/microsoft-authentication-library-for-java
@@ -123,6 +116,3 @@ Ref: https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-a
 ### Client Credentials Flow
 ![](./images/oauth-client-creds-flow.svg)
 Ref: https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
-
-
-
