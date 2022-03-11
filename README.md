@@ -1,5 +1,5 @@
 # Identity PoC Hack in Java
-A Hack to develop MVPs using Java to leverage Azure AD and Azure AD B2C identities. 
+A Hack to develop PoCs using Java to leverage Azure AD and Azure AD B2C identities. 
 
 ## Goals
 1. Develop a PoC that signs-in, signs-up, and signs-out a user with Azure AD B2C using MSAL Java.
@@ -91,7 +91,7 @@ References:
 - [Register an AAD app](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
 
 ### Objective 2: Secure Java app with AAD
-1. Rinse and repeat steps in the B2C MVP or just clone above with some minor tweaks.
+1. Rinse and repeat steps in the B2C PoC or just clone above with some minor tweaks.
 
 References: 
 - [Force revoke of token (for testing silent login)](https://docs.microsoft.com/en-us/azure/active-directory/enterprise-users/users-revoke-access)
